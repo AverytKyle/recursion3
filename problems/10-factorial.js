@@ -17,7 +17,11 @@ factorial(5); // 120
 ***********************************************************************/
 
 function factorial(num) {
-  // Your code here 
+  if (num === 1) {
+    return num
+  }
+
+  return num * factorial(num - 1)
 }
   
 /**************DO NOT MODIFY ANYTHING UNDER THIS LINE*****************/
