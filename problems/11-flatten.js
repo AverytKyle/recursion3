@@ -13,8 +13,18 @@ flatten([1, [2, [3]]]); // [1, 2, 3]
 ***********************************************************************/
 
 function flatten(arr) {
-  // Your code here 
+  debugger
+  let answer = [];
+  arr.forEach(element => {
+    if (Array.isArray(element)){
+      answer.push(...flatten(element))
+    } else {
+      answer.push(element);
+    }
+  }); 
+  return answer;
 }
+  console.log(flatten([1, [2, [3]]]));
   
 /**************DO NOT MODIFY ANYTHING UNDER THIS LINE*****************/
 module.exports = flatten;
